@@ -1,7 +1,8 @@
 body {
     font-family: 'Libre Franklin', sans-serif;
     margin: 0;
-    background-color: #4053BE;
+    background-color: #EBF1FA;
+    color: #444;
 }
 
 h1, h2, h3, h4 {
@@ -10,11 +11,11 @@ h1, h2, h3, h4 {
 }
 
 .logo {
+    margin-bottom: 40px;
 }
 
 .content {
     text-align: center;
-    color: white;
 
     position: fixed;
     top: 0;
@@ -22,5 +23,5 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     margin: auto;
-    height: 465px;
+    height: 555px;
 }
