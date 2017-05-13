@@ -1,0 +1,5 @@
+<div class="content">
+    <img src="/static/images/logo.png" alt="Fengari" class="logo">
+    <h1>Fengari</h1>
+    <h3>🐺 φεγγάρι - The Lua VM written in JS ES6 for Node and the browser</h3>
+</div>

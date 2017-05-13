@@ -1,0 +1,26 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0;
+    background-color: #4053BE;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+    font-style: italic;
+}
+
+.logo {
+}
+
+.content {
+    text-align: center;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 465px;
+}
