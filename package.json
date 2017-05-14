@@ -7,7 +7,7 @@
   "author": "Benoit Giannangeli <giann008@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "fengari": "^0.0.1",
-    "fengari-web-cli": "^1.0.1"
+    "fengari": "fengari-lua/fengari",
+    "fengari-web-cli": "fengari-lua/fengari-web-cli"
   }
 }

@@ -2,15 +2,25 @@
 # yarn lockfile v1
 
 
-fengari-web-cli@^1.0.1:
+fengari-web-cli@fengari-lua/fengari-web-cli:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fengari-web-cli/-/fengari-web-cli-1.0.1.tgz#1487d6d1e0ef08a2afdb46f39f0352eeeef13a81"
+  resolved "https://codeload.github.com/fengari-lua/fengari-web-cli/tar.gz/8afa1a6429995d593393ffe5ccb092cbdc4e58a0"
   dependencies:
     fengari "^0.0.1"
 
 fengari@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/fengari/-/fengari-0.0.1.tgz#c4f8887ee738df8b8ac93c1e5feb856230323ef3"
+  dependencies:
+    readline-sync "^1.4.7"
+    seedrandom "^2.4.2"
+    sprintf-js giann/sprintf.js
+    strftime "^0.10.0"
+    tmp "0.0.31"
+
+fengari@fengari-lua/fengari:
+  version "0.0.1"
+  resolved "https://codeload.github.com/fengari-lua/fengari/tar.gz/43238f0f3d12c0cf2424579f9562b73323021d61"
   dependencies:
     readline-sync "^1.4.7"
     seedrandom "^2.4.2"
