@@ -1,0 +1,13 @@
+{
+  "name": "fengari.io",
+  "version": "1.0.0",
+  "description": "Home of fengari",
+  "main": "app.lua",
+  "repository": "https://github.com/giann/fengari.io.git",
+  "author": "Benoit Giannangeli <giann008@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fengari": "^0.0.1",
+    "fengari-web-cli": "^1.0.1"
+  }
+}
