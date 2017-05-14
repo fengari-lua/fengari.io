@@ -18,7 +18,7 @@
     </a>
 </div>
 
-<script src="node_modules/fengari/dist/fengari.js" type="text/javascript"></script>
+<script src="node_modules/fengari/dist/fengari.min.js" type="text/javascript"></script>
 <script src="node_modules/fengari-web-cli/lua-web-cli.js" type="text/javascript"></script>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
