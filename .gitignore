@@ -2,7 +2,6 @@
 logs/
 conf/
 nginx.conf
-nginx.conf.compiled
 mime.types
 proxy_temp/
 fastcgi_temp/
@@ -12,3 +11,4 @@ uwsgi_temp/
 *.rockspec
 *.rock
 node_modules
+static/js

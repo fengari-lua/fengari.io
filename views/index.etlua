@@ -3,11 +3,10 @@
     <h1>Fengari</h1>
 
     <div class="repl">
-        <pre>
-            <code class="lua" id="fengari-console"></code>
-        </pre>
+        <code id="fengari-console"></code>
         <div class="fengari-input-container">
-            <textarea id="fengari-input" rows="1"></textarea>
+            <label id="fengari-prompt" for="fengari-input">&gt; </label>
+            <textarea class="lua" id="fengari-input" rows="1"></textarea>
         </div>
     </div>
 
@@ -22,12 +21,6 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/lua.min.js"></script>
 
-<script>
-    hljs.initHighlightingOnLoad();
-
-    const fengari_console = document.getElementById('fengari-console');
-
-    fengari_console.onchange = function() {
-        hljs.highlightBlock(fengari_console);
-    };
+<script src="src/web-cli.lua" type="text/lua" id="cli.lua">
+    <%- repl %>
 </script>
