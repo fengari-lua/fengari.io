@@ -116,3 +116,4 @@ function input:onkeydown(e)
 end
 
 _G.print(_G._COPYRIGHT)
+input:focus()
