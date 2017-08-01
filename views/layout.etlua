@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" type="text/css" href="/static/css/fengari.css">
     
-    <link rel="stylesheet" type="text/css" href="node_modules/fengari-web-cli/github.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/fengari-web-cli/lua-web-cli.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/github.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lua-web-cli.css">
 
     <link rel="shortcut icon" href="/static/images/logo.png" type="image/png"/>
 </head>
