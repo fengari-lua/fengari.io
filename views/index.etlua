@@ -21,4 +21,4 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/lua.min.js"></script>
 
-<script src="node_modules/fengari-web-cli/src/web-cli.lua" type="text/lua" async></script>
+<script src="/static/lua/web-cli.lua" type="text/lua" async></script>
