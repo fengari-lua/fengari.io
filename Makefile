@@ -1,12 +1,12 @@
-all: static/js/fengari-web-cli.js
+all: static/js/fengari-web.js
 
 serve: all
 	lapis server production
 
-fengari-web-cli/dist/fengari-web-cli.js: fengari-web-cli/
-	(cd fengari-web-cli && yarn install && webpack -p);
+fengari-web/dist/fengari-web.js: fengari-web/
+	(cd fengari-web && yarn install && webpack -p);
 
-static/js/fengari-web-cli.js: fengari-web-cli/dist/fengari-web-cli.js
+static/js/fengari-web.js: fengari-web/dist/fengari-web.js
 	install -m 644 -D "$<" "$@"
 
 .PHONY: all serve

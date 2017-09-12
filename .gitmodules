@@ -1,3 +1,3 @@
-[submodule "fengari-web-cli"]
-	path = fengari-web-cli
-	url = https://github.com/fengari-lua/fengari-web-cli
+[submodule "fengari-web"]
+	path = fengari-web
+	url = https://github.com/fengari-lua/fengari-web.git
