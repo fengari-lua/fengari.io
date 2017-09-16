@@ -11,4 +11,4 @@ uwsgi_temp/
 *.rockspec
 *.rock
 node_modules
-static/js
+static/js/fengari-web.js
