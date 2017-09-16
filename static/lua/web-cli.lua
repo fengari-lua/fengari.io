@@ -29,14 +29,15 @@ local historyLimit = 100
 _G.print = function(...)
     local toprint = pack(...)
 
-    local line = document:createElement("span")
+    local line = document:createElement("pre")
+    line.style["white-space"] = "pre-wrap"
     output:appendChild(line)
 
     for i = 1, toprint.n do
-        local item = document:createElement("pre")
-        item.style["white-space"] = "pre-wrap"
-        item:appendChild(document:createTextNode(tostring(toprint[i])))
-        line:appendChild(item)
+        if i ~= 1 then
+            line:appendChild(document:createTextNode("\t"))
+        end
+        line:appendChild(document:createTextNode(tostring(toprint[i])))
     end
 
     output.scrollTop = output.scrollHeight
