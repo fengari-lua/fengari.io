@@ -4,6 +4,7 @@ types {
     text/xml                              xml;
     image/gif                             gif;
     image/jpeg                            jpeg jpg;
+    application/lua                       lua;
     application/x-javascript              js;
     application/atom+xml                  atom;
     application/rss+xml                   rss;
