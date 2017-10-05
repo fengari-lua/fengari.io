@@ -6,7 +6,7 @@
         <code id="fengari-console"></code>
         <div class="fengari-input-container">
             <label id="fengari-prompt" for="fengari-input">&gt; </label>
-            <textarea class="lua" id="fengari-input" rows="1"></textarea>
+            <textarea class="lua" id="fengari-input" rows="1" placeholder="enter lua command here"></textarea>
         </div>
     </div>
 
@@ -15,7 +15,18 @@
         <img src="/static/images/github-icon.svg" alt="Github" width="32" class="logo">
     </a>
 </div>
-
+<script>
+  document.getElementById('fengari-input').addEventListener('focus', function() {
+    if (this.textContent === '') {
+      this.placeholder = '';
+    }
+  });
+  document.getElementById('fengari-input').addEventListener('blur', function() {
+    if (this.textContent === '') {
+      this.placeholder = 'enter lua command here';
+    }
+  });
+</script>
 <script src="/static/js/fengari-web.js" type="text/javascript"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
