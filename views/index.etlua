@@ -13,14 +13,16 @@
 
     <div class="section">
         <div class="section__content">
+            <h2>What is it ?</h2>
+
             <p>
-                Fengari is the Lua VM written in Javascript.
-                It uses Javascript's garbage collector so that interoperability with the DOM is memory safe.
+                Fengari is the Lua VM written in JavaScript.
+                It uses JavaScript's garbage collector so that interoperability with the DOM is memory safe.
             </p>
 
             <p>
                 It comes with a <a href="https://github.com/fengari-lua/fengari-interop">simple module</a>,
-                that renders any interaction with Javascript and the DOM transparent:
+                that renders any interaction with JavaScript and the DOM transparent:
             </p>
 
             <div class="center">
@@ -52,7 +54,7 @@ js = require "js"
 window = js.global
 document = window.document
 
-print("The page title is: " .. document.title)
+print("This section's title is: " .. document.title)
                         </pre>
                     </code>
                     <div class="snippet__output"></div>
@@ -148,7 +150,7 @@ end)()
             <h2>Getting started</h2>
 
             <p>
-                The easiest way to get started using Fengari in the browser is to use <a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>.
+                The easiest way to get started with Fengari in the browser is to use <a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>.
                 This module will watch the DOM for any <span class="quoted">&lt;script type=&quot;application/lua&quot; src=&quot;...&quot; async&gt;</span> and run them with Fengari.
             </p>
 
@@ -156,7 +158,7 @@ end)()
                 <ol>
                     <li>
                         <p>Build fengari-web:</p>
-                        <div class="snippet snippet--notaction">
+                        <div class="snippet snippet--noaction">
                             <code class="snippet__code bash">
                                 <pre>
 git clone https://github.com/fengari-lua/fengari-web.git
@@ -169,7 +171,7 @@ npm run build
 
                     <li>
                         <p>Include it in your webpage:</p>
-                        <div class="snippet snippet--notaction">
+                        <div class="snippet snippet--noaction">
                             <code class="snippet__code html">
                                 <pre>
 &lt;script src="dist/fengari-web.js" type="text/javascript"&gt;&lt;/script&gt;
@@ -180,7 +182,7 @@ npm run build
 
                     <li>
                         <p>Now any script of type <span class="quoted">application/lua</span> will be run by fengari:</p>
-                        <div class="snippet snippet--notaction">
+                        <div class="snippet snippet--noaction">
                             <code class="snippet__code html">
                                 <pre>
 &lt;script type="application/lua"&gt;
@@ -193,6 +195,22 @@ npm run build
                         </div>
                     </li>
                 </ol>
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__content">
+            <h2>Structure</h2>
+
+            <p>
+                Fengari is spread across several repositories:
+                <ul>
+                    <li><a href="https://github.com/fengari-lua/fengari">fengari</a>: the core, largely a port of the PUC-Rio C implementation of Lua</li>
+                    <li><a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>: to use Fengari in the browser as easily as you might use JavaScript</li>
+                    <li><a href="https://github.com/fengari-lua/fengari-interop">fengari-interop</a>: a lua library that makes interoperating with JavaScript objects simple, it is already included in fengari-web</li>
+                    <li><a href="https://github.com/fengari-lua/fengari-node-cli">fengari-node-cli</a>: Lua CLI but running on top of Node.js</li>
+                </ul>
             </p>
         </div>
     </div>
