@@ -5,7 +5,7 @@
     padding: 0;
     text-align: left;
     width: 600px;
-    margin: 50px 0;
+    margin: 50px auto;
     border-radius: 3px;
     border: 1px solid #ddd;
 }
@@ -21,7 +21,6 @@ pre {
 
 #fengari-console {
     padding: 11px 16px;
-    font-size: 13px;
     display: block;
 }
 
@@ -36,7 +35,6 @@ pre {
     font-family: monospace;
     color: #444;
     background: #f0f0f0;
-    font-size: 13px;
     min-height: 14px; /* minimum one line */
     padding: 10px;
     margin: 0;
@@ -52,4 +50,5 @@ pre {
 
 #fengari-prompt {
     font-weight: bold;
+    padding: 8px 10px;
 }

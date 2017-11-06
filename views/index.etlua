@@ -20,7 +20,7 @@
 
             <p>
                 It comes with a <a href="https://github.com/fengari-lua/fengari-interop">simple module</a>,
-                that renders any interaction with Javascript transparent:
+                that renders any interaction with Javascript and the DOM transparent:
             </p>
 
             <div class="center">
@@ -33,6 +33,7 @@ window = js.global
 window:alert("Hello from Fengari !")
                         </pre>
                     </code>
+                    <div class="snippet__output"></div>
                     <div class="snippet__actions">
                         Try it: 
                         <div class="snippet__actions__action" data-action="run">
@@ -54,7 +55,7 @@ document = window.document
 print("The page title is: " .. document.title)
                         </pre>
                     </code>
-                    <pre class="snippet__output"></pre>
+                    <div class="snippet__output"></div>
                     <div class="snippet__actions">
                         Try it: 
                         <div class="snippet__actions__action" data-action="run">
@@ -64,6 +65,63 @@ print("The page title is: " .. document.title)
                                 document = window.document
 
                                 print("The page title is: " .. document.title)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__content">
+            <p>
+                Lua in the browser means you can use coroutines to write beautiful asynchronous code:
+            </p>
+
+            <div class="center">
+                <div class="snippet">
+                    <code class="snippet__code lua">
+                        <pre>
+coroutine.wrap(function()
+    local data = fetch("/static/data/test.html")
+
+    print("Received: ", data)
+end)()
+                        </pre>
+                    </code>
+                    <div class="snippet__output"></div>
+                    <div class="snippet__actions">
+                        Try it: 
+                        <div class="snippet__actions__action" data-action="run">
+                            ▶
+                            <div class="snippet__source" data-lang="lua">
+                                local fetch = function(url)
+                                    local co = coroutine.running()
+
+                                    local promise = js.global:fetch(url)
+
+                                    promise["then"](promise, function(_, res)
+                                        local textPromise = res:text()
+                                        textPromise["then"](textPromise, function(_, text)
+                                            coroutine.resume(co, text)
+                                        end)
+                                    end)
+
+                                    local res = coroutine.yield()
+
+                                    return res
+                                end
+
+                                local snippetPrint = _G.print
+
+                                local co = coroutine.wrap(function()
+                                    local data = fetch("/static/data/test.html")
+
+                                    snippetPrint("Received: ", data)
+                                end)
+
+                                co()
                             </div>
                         </div>
                     </div>
