@@ -46,6 +46,7 @@ pre {
     flex: 1;
     height: 11px; /* start off one line tall */
     padding-left: 0;
+    font-size: 1rem;
 }
 
 #fengari-prompt {

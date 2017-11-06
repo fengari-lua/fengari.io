@@ -1,8 +1,20 @@
+@font-face {
+    font-family: 'profontwindowsregular';
+    src: url('ProFontWindows-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Libre Franklin', sans-serif;
     margin: 0;
     background-color: #ebf1fa;
     color: #444;
+}
+
+pre, code, .quoted {
+    font-family: 'profontwindowsregular';
+    font-size: 0.85rem;
 }
 
 h1, h2, h3, h4 {
@@ -81,7 +93,7 @@ a {
     vertical-align: top;
 }
 
-.snippet:nth-child(n+1) {
+.snippet:nth-child(n+2) {
     margin-left: 30px;
 }
 
@@ -130,7 +142,13 @@ a {
 .snippet__output--visible {
     font-size: inherit;
     padding: 10px;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     opacity: 1;
     transition: opacity 0.4s ease; 
+}
+
+.snippet--notaction {
+    padding-bottom: 0;
+    min-height: 0;
+    min-width: 0;
 }
