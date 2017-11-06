@@ -1,19 +1,92 @@
 <div class="content">
-    <img src="/static/images/logo.png" alt="Fengari" class="logo">
-    <h1>Fengari</h1>
 
-    <div class="repl">
-        <code id="fengari-console"></code>
-        <div class="fengari-input-container">
-            <label id="fengari-prompt" for="fengari-input">&gt; </label>
-            <textarea class="lua" id="fengari-input" rows="1"></textarea>
+    <div class="section header">
+        <div class="section__content">
+            <img src="/static/images/logo.png" alt="Fengari" class="logo">
+            <h1>Fengari</h1>
+            <h3>🐺 φεγγάρι - Lua for the Browser</h3>
+            <a href="https://github.com/fengari-lua/fengari">
+                <img src="/static/images/github-icon.svg" alt="Github" width="32" class="logo">
+            </a>
         </div>
     </div>
 
-    <h3>🐺 φεγγάρι - Lua for the Browser</h3>
-    <a href="https://github.com/fengari-lua/fengari">
-        <img src="/static/images/github-icon.svg" alt="Github" width="32" class="logo">
-    </a>
+    <div class="section">
+        <div class="section__content">
+            <p>
+                Fengari is the Lua VM written in Javascript.
+                It uses Javascript's garbage collector so that interoperability with the DOM is memory safe.
+            </p>
+
+            <p>
+                It comes with a <a href="https://github.com/fengari-lua/fengari-interop">simple module</a>,
+                that renders any interaction with Javascript transparent:
+            </p>
+
+            <div class="center">
+                <div class="snippet">
+                    <code class="snippet__code lua">
+                        <pre>
+js = require "js"
+window = js.global
+
+window:alert("Hello from Fengari !")
+                        </pre>
+                    </code>
+                    <div class="snippet__actions">
+                        Try it: 
+                        <div class="snippet__actions__action" data-action="run">
+                            ▶
+                            <div class="snippet__source" data-lang="lua">
+                                js.global:alert("Hello from Fengari !")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="snippet">
+                    <code class="snippet__code lua">
+                        <pre>
+js = require "js"
+window = js.global
+document = window.document
+
+print("The page title is: " .. document.title)
+                        </pre>
+                    </code>
+                    <pre class="snippet__output"></pre>
+                    <div class="snippet__actions">
+                        Try it: 
+                        <div class="snippet__actions__action" data-action="run">
+                            ▶
+                            <div class="snippet__source" data-lang="lua">
+                                window = js.global
+                                document = window.document
+
+                                print("The page title is: " .. document.title)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__content">
+            <h3>Test it out !</h3>
+            <div class="repl">
+                <code id="fengari-console"></code>
+                <div class="fengari-input-container">
+                    <label id="fengari-prompt" for="fengari-input">→ </label>
+                    <textarea class="lua" id="fengari-input" rows="1" placeholder="Type some Lua here..."></textarea>
+                </div>
+            </div>
+
+            This REPL is itself <a href="https://github.com/fengari-lua/fengari.io/blob/master/static/lua/web-cli.lua">written in Lua</a>.
+        </div>
+    </div>
+
 </div>
 
 <script src="/static/js/fengari-web.js" type="text/javascript"></script>
@@ -22,3 +95,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/lua.min.js"></script>
 
 <script src="/static/lua/web-cli.lua" type="text/lua" async></script>
+<script src="/static/lua/snippets.lua" type="text/lua" async></script>

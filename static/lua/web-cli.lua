@@ -89,7 +89,7 @@ local function doREPL()
     end
 
     input.value = ""
-    prompt.textContent = _G._PROMPT or "> "
+    -- prompt.textContent = _G._PROMPT or "> "
 
     triggerEvent(output, "change")
 end

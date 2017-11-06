@@ -1,7 +1,7 @@
 body {
     font-family: 'Libre Franklin', sans-serif;
     margin: 0;
-    background-color: #EBF1FA;
+    background-color: #ebf1fa;
     color: #444;
 }
 
@@ -10,11 +10,127 @@ h1, h2, h3, h4 {
     font-style: italic;
 }
 
-.logo {
-    margin-bottom: 40px;
+a {
+    color: inherit;
 }
 
-.content {
+.center {
     text-align: center;
-    margin-top: 50px;
+}
+
+.section {
+    background-color: #ebf1fa;
+    background-image:
+    linear-gradient(
+      to bottom left, 
+      #ebf1fa, white 70%
+    );
+    padding: 20px 0;
+}
+
+.section.header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.section:nth-child(3n-1) {
+    background-color: #404ebc;
+    background-image:
+    linear-gradient(
+      to bottom left, 
+      #4B4483, #4053BE 70%
+    );
+    color: white;
+}
+
+.section:nth-child(3n) {
+    background-color: #4B4483;
+    background-image:
+    linear-gradient(
+      to top left, 
+      #191251, #4B4483 70%
+    );
+    color: white;
+}
+
+.section__content {
+    width: 700px;
+    margin: auto;
+}
+
+.section__content p {
+    text-align: left;
+}
+
+.repl, .snippet {
+    box-shadow: 0 0 40px #444;
+}
+
+.snippet {
+    text-align: left;
+    display: inline-block;
+    min-width: 200px;
+    min-height: 100px;
+    color: #444;
+    background: #f8f8f8;
+    border-radius: 3px;
+    position: relative;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding-bottom: 34px;
+    vertical-align: top;
+}
+
+.snippet:nth-child(n+1) {
+    margin-left: 30px;
+}
+
+.snippet__code {
+    padding: 15px !important;
+    border-radius: 3px 3px 0 0;
+}
+
+.snippet__actions {
+    margin-top: 3px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #444;
+    background: #f0f0f0;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 3px 3px;
+    font-size: 12px
+}
+
+.snippet__actions__action {
+    cursor: pointer;
+    padding: 7px 10px;
+    display: inline-block;
+}
+
+
+.snippet__actions__action:hover {
+    background-color: rgba(150, 150, 150, 0.1);
+}
+
+.snippet__source {
+    display: none;
+}
+
+.snippet__output {
+    font-size: 0;
+    opacity: 0;
+    background-color: #ebf1fa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.snippet__output--visible {
+    font-size: inherit;
+    padding: 10px;
+    margin: 10px;
+    opacity: 1;
+    transition: opacity 0.4s ease; 
 }

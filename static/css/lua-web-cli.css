@@ -5,7 +5,9 @@
     padding: 0;
     text-align: left;
     width: 600px;
-    margin: auto;
+    margin: 50px 0;
+    border-radius: 3px;
+    border: 1px solid #ddd;
 }
 
 .repl code {
@@ -18,8 +20,8 @@ pre {
 }
 
 #fengari-console {
-    padding: 0.5em;
-    font-size: 11px;
+    padding: 11px 16px;
+    font-size: 13px;
     display: block;
 }
 
@@ -32,19 +34,22 @@ pre {
     border: none;
     white-space: pre-wrap;
     font-family: monospace;
-    color: #333;
+    color: #444;
     background: #f0f0f0;
-    font-size: 11px;
-    min-height: 11px; /* minimum one line */
-    padding: 0;
+    font-size: 13px;
+    min-height: 14px; /* minimum one line */
+    padding: 10px;
     margin: 0;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #ddd;
 }
 
 #fengari-input {
     flex: 1;
     height: 11px; /* start off one line tall */
+    padding-left: 0;
 }
 
-#fengari-input:focus, #fengari-input:hover, .fengari-input-container:hover {
-    background: #e8e8e8;
+#fengari-prompt {
+    font-weight: bold;
 }
