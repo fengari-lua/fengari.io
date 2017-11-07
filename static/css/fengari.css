@@ -38,10 +38,12 @@ li {
     padding: 20px 0;
 }
 
-.section.header {
+.section--header {
     text-align: center;
     padding-top: 50px;
+}
 
+.section--header, .section--footer {
     background-color: #ebf1fa !important;
     background-image: linear-gradient(
       to bottom left, 

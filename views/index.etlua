@@ -1,6 +1,6 @@
 <div class="content">
 
-    <div class="section header">
+    <div class="section section--header">
         <div class="section__content">
             <img src="/static/images/logo.png" alt="Fengari" class="logo">
             <h1>Fengari</h1>
@@ -211,6 +211,25 @@ npm run build
                     <li><a href="https://github.com/fengari-lua/fengari-interop">fengari-interop</a>: a lua library that makes interoperating with JavaScript objects simple, it is already included in fengari-web</li>
                     <li><a href="https://github.com/fengari-lua/fengari-node-cli">fengari-node-cli</a>: Lua CLI but running on top of Node.js</li>
                 </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="section section--footer">
+        <div class="section__content">
+            <h2>References</h2>
+            <p>
+                <ul>
+                    <li>Github: <a href="https://github.com/fengari-lua">fengari-lua</a></li>
+                    <li><a href="https://hackernoon.com/why-we-rewrote-lua-in-js-a66529a8278d">Why we rewrote Lua in JS</a></li>
+                    <li>Daurnimator's talk at Lua Workshop 2017: <a href="https://www.youtube.com/watch?v=xrLIgmd8xik">video</a>, <a href="https://www.lua.org/wshop17/fengari.html">slides</a></li>
+                </ul>
+            </p>
+
+            <p>
+                <div class="center">
+                    <a href="mailto:team@fengari.io">team@fengari.io</a>
+                </div>
             </p>
         </div>
     </div>
