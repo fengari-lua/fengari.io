@@ -226,7 +226,8 @@ npm run build
 
             <p>
                 <div class="center">
-                    <a href="mailto:team@fengari.io">team@fengari.io</a>
+                    Mail: <a href="mailto:team@fengari.io">team@fengari.io</a>
+                    IRC: <a href="https://webchat.freenode.net/?channels=fengari">#fengari</a>
                 </div>
             </p>
         </div>

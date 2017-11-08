@@ -6,7 +6,7 @@
     <title><%= page_title or "Fengari" %></title>
 
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,600,600i" rel="stylesheet">
-    
+
     <link rel="stylesheet" type="text/css" href="/static/css/fengari.css">
     
     <link rel="stylesheet" type="text/css" href="/static/css/github.css">
