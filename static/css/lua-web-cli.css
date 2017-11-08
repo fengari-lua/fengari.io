@@ -53,3 +53,11 @@ pre {
     font-weight: bold;
     padding: 8px 10px;
 }
+
+@media screen and (max-width : 800px) {
+
+    .repl {
+        width: 100%;
+    }
+
+}

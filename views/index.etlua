@@ -6,7 +6,7 @@
             <h1>Fengari</h1>
             <h3>🐺 φεγγάρι - Lua for the Browser</h3>
             <a href="https://github.com/fengari-lua/fengari">
-                <img src="/static/images/github-icon.svg" alt="Github" width="32" class="logo">
+                <img src="/static/images/github-icon.svg" alt="Github" width="32">
             </a>
         </div>
     </section>

@@ -34,6 +34,11 @@ li {
     text-align: center;
 }
 
+.logo {
+    width: 80%;
+    max-width: 325px;
+}
+
 section {
     padding: 20px 0;
 }
@@ -157,4 +162,24 @@ section:nth-child(2n-1) {
     padding-bottom: 0;
     min-height: 0;
     min-width: 0;
+}
+
+@media screen and (max-width : 800px) {
+
+    section {
+        padding: 20px;
+    }
+
+    .section__content {
+        width: 100%;
+    }
+
+    .snippet {
+        max-width: 100%;
+    }
+
+    .snippet:nth-child(n+2) {
+        margin-left: 0;
+    }
+
 }
