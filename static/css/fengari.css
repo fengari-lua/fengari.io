@@ -103,14 +103,14 @@ section:nth-child(2n-1) {
     background: #f8f8f8;
     border-radius: 3px;
     position: relative;
-    margin: 10px 0;
+    margin: 10px;
     border: 1px solid #ddd;
     padding-bottom: 34px;
     vertical-align: top;
 }
 
-.snippet:nth-child(n+2) {
-    margin-left: 30px;
+.snippets-row .snippet {
+    width: 45%;
 }
 
 .snippet__code {
@@ -167,6 +167,7 @@ section:nth-child(2n-1) {
     padding-bottom: 0;
     min-height: 0;
     min-width: 0;
+    width: 80%;
 }
 
 @media screen and (max-width : 800px) {
@@ -175,16 +176,21 @@ section:nth-child(2n-1) {
         padding: 20px;
     }
 
+    .snippets-row .snippet {
+        width: 100%;
+    }
+
     .section__content {
         width: 100%;
     }
 
     .snippet {
         max-width: 100%;
+        margin: 10px 0;
     }
 
-    .snippet:nth-child(n+2) {
-        margin-left: 0;
+    .snippet--noaction {
+        width: 100%;
     }
 
 }

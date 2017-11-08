@@ -26,43 +26,46 @@
             </p>
 
             <div class="center">
-                <div class="snippet">
-                    <code class="snippet__code lua hljs">
+
+                <div class="snippets-row">
+                    <div class="snippet">
+                        <code class="snippet__code lua hljs">
 <pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
 window = js.global
 
 window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
-                    </code>
-                    <div class="snippet__output"></div>
-                    <div class="snippet__actions">
-                        Try it:
-                        <div class="snippet__actions__action" data-action="run">
-                            ▶
-                            <div class="snippet__source" data-lang="lua">
-                                js.global:alert("Hello from Fengari!")
+                        </code>
+                        <div class="snippet__output"></div>
+                        <div class="snippet__actions">
+                            Try it:
+                            <div class="snippet__actions__action" data-action="run">
+                                ▶
+                                <div class="snippet__source" data-lang="lua">
+                                    js.global:alert("Hello from Fengari!")
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="snippet">
-<code class="snippet__code lua hljs">
-                        <pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
+                    <div class="snippet">
+                        <code class="snippet__code lua hljs">
+<pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
 window = js.global
 document = window.document
 
-<span class="hljs-built_in">print</span>(<span class="hljs-string">"This document's title is: "</span> .. document.title)</pre>
-                    </code>
-                    <div class="snippet__output"></div>
-                    <div class="snippet__actions">
-                        Try it:
-                        <div class="snippet__actions__action" data-action="run">
-                            ▶
-                            <div class="snippet__source" data-lang="lua">
-                                window = js.global
-                                document = window.document
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Document's title: "</span> .. document.title)</pre>
+                        </code>
+                        <div class="snippet__output"></div>
+                        <div class="snippet__actions">
+                            Try it:
+                            <div class="snippet__actions__action" data-action="run">
+                                ▶
+                                <div class="snippet__source" data-lang="lua">
+                                    window = js.global
+                                    document = window.document
 
-                                print("This document's title is: " .. document.title)
+                                    print("Document's title: " .. document.title)
+                                </div>
                             </div>
                         </div>
                     </div>
