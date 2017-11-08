@@ -51,7 +51,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
 window = js.global
 document = window.document
 
-<span class="hljs-built_in">print</span>(<span class="hljs-string">"This section's title is: "</span> .. document.title)</pre>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"This document's title is: "</span> .. document.title)</pre>
                     </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
@@ -62,7 +62,7 @@ document = window.document
                                 window = js.global
                                 document = window.document
 
-                                print("The page title is: " .. document.title)
+                                print("This document's title is: " .. document.title)
                             </div>
                         </div>
                     </div>
