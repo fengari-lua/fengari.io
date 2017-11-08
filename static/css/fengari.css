@@ -12,7 +12,7 @@ body {
     color: #444;
 }
 
-pre, code, .quoted {
+pre, code, .quoted, #fengari-input, #fengari-prompt {
     font-family: 'profontwindowsregular';
     font-size: 0.85rem;
 }
