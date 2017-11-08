@@ -31,7 +31,7 @@
 <pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
 window = js.global
 
-window:alert(<span class="hljs-string">"Hello from Fengari !"</span>)</pre>
+window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                     </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
@@ -39,7 +39,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari !"</span>)</pre>
                         <div class="snippet__actions__action" data-action="run">
                             ▶
                             <div class="snippet__source" data-lang="lua">
-                                js.global:alert("Hello from Fengari !")
+                                js.global:alert("Hello from Fengari!")
                             </div>
                         </div>
                     </div>
