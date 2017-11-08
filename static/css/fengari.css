@@ -43,6 +43,10 @@ section {
     padding: 20px 0;
 }
 
+section:not(.header):not(.footer) {
+    text-shadow: 0 0 1px black;
+}
+
 section.header {
     text-align: center;
     padding-top: 50px;
@@ -89,6 +93,7 @@ section:nth-child(2n-1) {
 }
 
 .snippet {
+    text-shadow: none;
     box-sizing: border-box;
     text-align: left;
     display: inline-block;
