@@ -84,7 +84,7 @@ document = window.document
 
     window:setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>
         <span class="hljs-built_in">assert</span>(<span class="hljs-built_in">coroutine</span>.resume(co))
-    <span class="hljs-keyword">end</span>, delay)
+    <span class="hljs-keyword">end</span>, delay*1000)
 
     <span class="hljs-built_in">coroutine</span>.yield(co)
 <span class="hljs-keyword">end</span>
@@ -92,7 +92,7 @@ document = window.document
 <span class="hljs-built_in">coroutine</span>.wrap(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>
     <span class="hljs-built_in">print</span> <span class="hljs-string">"Going to sleep now..."</span>
 
-    sleep(<span class="hljs-number">3000</span>)
+    sleep(<span class="hljs-number">3</span>)
 
     <span class="hljs-built_in">print</span> <span class="hljs-string">"Sleep well ?"</span>
 <span class="hljs-keyword">end</span>)()</pre>
@@ -111,7 +111,7 @@ document = window.document
 
                                     window:setTimeout(function()
                                         assert(coroutine.resume(co))
-                                    end, delay)
+                                    end, delay*1000)
 
                                     coroutine.yield(co)
                                 end
@@ -121,7 +121,7 @@ document = window.document
                                 coroutine.wrap(function()
                                     snippetPrint "Going to sleep now..."
 
-                                    sleep(3000)
+                                    sleep(3)
 
                                     snippetPrint "Sleep well ?"
                                 end)()
