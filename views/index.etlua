@@ -17,7 +17,7 @@
 
             <p>
                 Fengari is the Lua VM written in JavaScript.
-                It uses JavaScript's garbage collector so that interoperability with the DOM is memory safe.
+                It uses JavaScript's garbage collector so that interoperability with the DOM is non-leaky.
             </p>
 
             <p>
