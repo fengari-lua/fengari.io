@@ -223,11 +223,12 @@ npm run build</pre>
                 </ul>
             </p>
 
+            <h2>Contact/Help</h2>
             <p>
-                <div class="center">
-                    Mail: <a href="mailto:team@fengari.io">team@fengari.io</a>
-                    IRC: <a href="https://webchat.freenode.net/?channels=fengari">#fengari</a>
-                </div>
+                <ul>
+                    <li>Mail: <a href="mailto:team@fengari.io">team@fengari.io</a></li>
+                    <li>Chat: <a href="ircs://chat.freenode.net:6697/fengari">#fengari on freenode</a> <a href="https://webchat.freenode.net/?channels=fengari">(Web Chat)</a> or <a href="https://matrix.to/#/#fengari:matrix.org">via Matrix</a></li>
+                </ul>
             </p>
         </div>
     </section>
