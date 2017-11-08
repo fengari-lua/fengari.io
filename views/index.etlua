@@ -27,13 +27,11 @@
 
             <div class="center">
                 <div class="snippet">
-                    <code class="snippet__code lua">
-                        <pre>
-js = require "js"
+                    <code class="snippet__code lua hljs">
+<pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
 window = js.global
 
-window:alert("Hello from Fengari !")
-                        </pre>
+window:alert(<span class="hljs-string">"Hello from Fengari !"</span>)</pre>
                     </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
@@ -48,14 +46,12 @@ window:alert("Hello from Fengari !")
                 </div>
 
                 <div class="snippet">
-                    <code class="snippet__code lua">
-                        <pre>
-js = require "js"
+<code class="snippet__code lua hljs">
+                        <pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
 window = js.global
 document = window.document
 
-print("This section's title is: " .. document.title)
-                        </pre>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"This section's title is: "</span> .. document.title)</pre>
                     </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
@@ -79,30 +75,28 @@ print("This section's title is: " .. document.title)
 
             <div class="center">
                 <div class="snippet">
-                    <code class="snippet__code lua">
-                        <pre>
-local js = require "js"
-local window = js.global
+                    <code class="snippet__code lua hljs">
+                        <pre><span class="hljs-keyword">local</span> js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
+<span class="hljs-keyword">local</span> window = js.global
 
-local function sleep(delay)
-    local co = assert(coroutine.running(), "Should be run in a coroutine")
+<span class="hljs-keyword">local</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sleep</span><span class="hljs-params">(delay)</span></span>
+    <span class="hljs-keyword">local</span> co = <span class="hljs-built_in">assert</span>(<span class="hljs-built_in">coroutine</span>.running(), <span class="hljs-string">"Should be run in a coroutine"</span>)
 
-    window:setTimeout(function()
-        assert(coroutine.resume(co))
-    end, delay)
+    window:setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>
+        <span class="hljs-built_in">assert</span>(<span class="hljs-built_in">coroutine</span>.resume(co))
+    <span class="hljs-keyword">end</span>, delay)
 
-    coroutine.yield(co)
-end
+    <span class="hljs-built_in">coroutine</span>.yield(co)
+<span class="hljs-keyword">end</span>
 
-coroutine.wrap(function()
-    print "Going to sleep now..."
+<span class="hljs-built_in">coroutine</span>.wrap(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>
+    <span class="hljs-built_in">print</span> <span class="hljs-string">"Going to sleep now..."</span>
 
-    sleep(3000)
+    sleep(<span class="hljs-number">3000</span>)
 
-    print "Sleep well ?"
-end)()
-                        </pre>
-                    </code>
+    <span class="hljs-built_in">print</span> <span class="hljs-string">"Sleep well ?"</span>
+<span class="hljs-keyword">end</span>)()</pre>
+                        </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
                         Try it: 
@@ -168,12 +162,10 @@ end)()
                     <li>
                         <p>Build fengari-web:</p>
                         <div class="snippet snippet--noaction">
-                            <code class="snippet__code bash">
-                                <pre>
-git clone https://github.com/fengari-lua/fengari-web.git
+                            <code class="snippet__code bash hljs">
+                                <pre>git <span class="hljs-built_in">clone</span> https://github.com/fengari-lua/fengari-web.git
 npm install
-npm run build
-                                </pre>
+npm run build</pre>
                             </code>
                         </div>
                     </li>
@@ -181,10 +173,8 @@ npm run build
                     <li>
                         <p>Include it in your webpage:</p>
                         <div class="snippet snippet--noaction">
-                            <code class="snippet__code html">
-                                <pre>
-&lt;script src="dist/fengari-web.js" type="text/javascript"&gt;&lt;/script&gt;
-                                </pre>
+                            <code class="snippet__code html hljs xml">
+                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dist/fengari-web.js"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
                             </code>
                         </div>
                     </li>
@@ -192,14 +182,12 @@ npm run build
                     <li>
                         <p>Now any script of type <span class="quoted">application/lua</span> will be run by fengari:</p>
                         <div class="snippet snippet--noaction">
-                            <code class="snippet__code html">
-                                <pre>
-&lt;script type="application/lua"&gt;
-    print("hello world !")
-&lt;/script&gt;
+                            <code class="snippet__code html hljs xml">
+                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span>&gt;</span><span class="javascript">
+    print(<span class="hljs-string">"hello world !"</span>)
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
-&lt;script src="/my-script.lua" type="application/lua" async&gt;&lt;/script&gt;
-                                </pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/my-script.lua"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span> <span class="hljs-attr">async</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
                             </code>
                         </div>
                     </li>

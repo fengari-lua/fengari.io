@@ -1,7 +1,6 @@
 local js = require "js"
 local global = js.global
 local document = global.document
-local hljs = js.global.hljs
 
 local printToDOM = function(element, ...)
     local toprint = table.pack(...)
@@ -17,11 +16,6 @@ local printToDOM = function(element, ...)
         line:appendChild(document:createTextNode(tostring(toprint[i])))
     end
 end
-
-document:querySelectorAll(".snippet code")
-    :forEach(function (_, block)
-        hljs:highlightBlock(block)
-    end)
 
 document:querySelectorAll(".snippet__actions__action[data-action='run']")
     :forEach(function (_, action)
