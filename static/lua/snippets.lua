@@ -41,8 +41,12 @@ document:querySelectorAll(".snippet__actions__action[data-action='run']")
 
             output.innerHTML = ""
 
-            if (source.dataset and source.dataset.lang == "lua") then
-                pcall(load(source.textContent))
+            if source.dataset and source.dataset.lang == "lua" then
+                local success, msg = pcall(load(source.textContent))
+
+                if not success then
+                    global.console:warn(msg or "An error occured while running snippet: \n" .. source.textContent)
+                end
             else
                 global:eval(source.textContent)
             end
