@@ -81,10 +81,25 @@ print("This section's title is: " .. document.title)
                 <div class="snippet">
                     <code class="snippet__code lua">
                         <pre>
-coroutine.wrap(function()
-    local data = fetch("/static/data/test.html")
+local js = require "js"
+local window = js.global
 
-    print("Received: ", data)
+local function sleep(delay)
+    local co = assert(coroutine.running(), "Should be run in a coroutine")
+
+    window:setTimeout(function()
+        assert(coroutine.resume(co))
+    end, delay)
+
+    coroutine.yield(co)
+end
+
+coroutine.wrap(function()
+    print "Going to sleep now..."
+
+    sleep(3000)
+
+    print "Sleep well ?"
 end)()
                         </pre>
                     </code>
@@ -94,32 +109,28 @@ end)()
                         <div class="snippet__actions__action" data-action="run">
                             ▶
                             <div class="snippet__source" data-lang="lua">
-                                local fetch = function(url)
-                                    local co = coroutine.running()
+                                local js = require "js"
+                                local window = js.global
 
-                                    local promise = js.global:fetch(url)
+                                local function sleep(delay)
+                                    local co = assert(coroutine.running(), "Should be run in a coroutine")
 
-                                    promise["then"](promise, function(_, res)
-                                        local textPromise = res:text()
-                                        textPromise["then"](textPromise, function(_, text)
-                                            coroutine.resume(co, text)
-                                        end)
-                                    end)
+                                    window:setTimeout(function()
+                                        assert(coroutine.resume(co))
+                                    end, delay)
 
-                                    local res = coroutine.yield()
-
-                                    return res
+                                    coroutine.yield(co)
                                 end
 
                                 local snippetPrint = _G.print
 
-                                local co = coroutine.wrap(function()
-                                    local data = fetch("/static/data/test.html")
+                                coroutine.wrap(function()
+                                    snippetPrint "Going to sleep now..."
 
-                                    snippetPrint("Received: ", data)
-                                end)
+                                    sleep(3000)
 
-                                co()
+                                    snippetPrint "Sleep well ?"
+                                end)()
                             </div>
                         </div>
                     </div>
