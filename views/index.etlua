@@ -35,7 +35,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                     </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
-                        Try it: 
+                        Try it:
                         <div class="snippet__actions__action" data-action="run">
                             ▶
                             <div class="snippet__source" data-lang="lua">
@@ -55,7 +55,7 @@ document = window.document
                     </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
-                        Try it: 
+                        Try it:
                         <div class="snippet__actions__action" data-action="run">
                             ▶
                             <div class="snippet__source" data-lang="lua">
@@ -99,7 +99,7 @@ document = window.document
                         </code>
                     <div class="snippet__output"></div>
                     <div class="snippet__actions">
-                        Try it: 
+                        Try it:
                         <div class="snippet__actions__action" data-action="run">
                             ▶
                             <div class="snippet__source" data-lang="lua">

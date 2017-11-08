@@ -55,7 +55,7 @@ section.header {
 section.header, section.footer {
     background-color: #ebf1fa !important;
     background-image: linear-gradient(
-      to bottom left, 
+      to bottom left,
       #ebf1fa, white 70%
     ) !important;
     color: #444 !important;
@@ -64,7 +64,7 @@ section.header, section.footer {
 section:nth-child(2n) {
     background-color: #404ebc;
     background-image: linear-gradient(
-      to bottom left, 
+      to bottom left,
       #4B4483, #4053BE 70%
     );
     color: white;
@@ -73,7 +73,7 @@ section:nth-child(2n) {
 section:nth-child(2n-1) {
     background-color: #4B4483;
     background-image: linear-gradient(
-      to top left, 
+      to top left,
       #191251, #4B4483 70%
     );
     color: white;
@@ -160,7 +160,7 @@ section:nth-child(2n-1) {
     padding: 10px;
     margin: 0px 10px 10px 10px;
     opacity: 1;
-    transition: opacity 0.4s ease; 
+    transition: opacity 0.4s ease;
 }
 
 .snippet--noaction {
