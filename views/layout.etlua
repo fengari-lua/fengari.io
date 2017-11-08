@@ -7,12 +7,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,600,600i" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/static/css/fengari.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fengari.css?v=1">
     
-    <link rel="stylesheet" type="text/css" href="/static/css/github.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/lua-web-cli.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/github.css?v=1">
+    <link rel="stylesheet" type="text/css" href="/static/css/lua-web-cli.css?v=1">
 
-    <link rel="shortcut icon" href="/static/images/logo.png" type="image/png"/>
+    <link rel="shortcut icon" href="/static/images/logo.png?v=1" type="image/png"/>
 </head>
 <body>
     <% content_for("inner") %>
