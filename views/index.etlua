@@ -16,7 +16,7 @@
             <h2>What is it ?</h2>
 
             <p>
-                Fengari is the Lua VM written in JavaScript.
+                Fengari (<i>Moon</i> in greek) is the Lua VM written in JavaScript.
                 It uses JavaScript's garbage collector so that interoperability with the DOM is non-leaky.
             </p>
 
