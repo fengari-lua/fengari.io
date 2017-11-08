@@ -34,16 +34,16 @@ li {
     text-align: center;
 }
 
-.section {
+section {
     padding: 20px 0;
 }
 
-.section--header {
+section.header {
     text-align: center;
     padding-top: 50px;
 }
 
-.section--header, .section--footer {
+section.header, section.footer {
     background-color: #ebf1fa !important;
     background-image: linear-gradient(
       to bottom left, 
@@ -52,7 +52,7 @@ li {
     color: #444 !important;
 }
 
-.section:nth-child(2n) {
+section:nth-child(2n) {
     background-color: #404ebc;
     background-image: linear-gradient(
       to bottom left, 
@@ -61,7 +61,7 @@ li {
     color: white;
 }
 
-.section:nth-child(2n-1) {
+section:nth-child(2n-1) {
     background-color: #4B4483;
     background-image: linear-gradient(
       to top left, 

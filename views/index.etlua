@@ -1,6 +1,6 @@
 <div class="content">
 
-    <div class="section section--header">
+    <section class="header">
         <div class="section__content">
             <img src="/static/images/logo.png" alt="Fengari" class="logo">
             <h1>Fengari</h1>
@@ -9,9 +9,9 @@
                 <img src="/static/images/github-icon.svg" alt="Github" width="32" class="logo">
             </a>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <div class="section__content">
             <h2>What is it ?</h2>
 
@@ -72,9 +72,7 @@ print("This section's title is: " .. document.title)
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section__content">
             <p>
                 Lua in the browser means you can use coroutines to write beautiful asynchronous code:
             </p>
@@ -128,9 +126,9 @@ end)()
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <div class="section__content">
             <h2>Test it out !</h2>
             <div class="repl">
@@ -143,9 +141,9 @@ end)()
 
             This REPL is itself <a href="https://github.com/fengari-lua/fengari.io/blob/master/static/lua/web-cli.lua">written in Lua</a>.
         </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <div class="section__content">
             <h2>Getting started</h2>
 
@@ -197,9 +195,9 @@ npm run build
                 </ol>
             </p>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <div class="section__content">
             <h2>Structure</h2>
 
@@ -213,9 +211,9 @@ npm run build
                 </ul>
             </p>
         </div>
-    </div>
+    </section>
 
-    <div class="section section--footer">
+    <section class="footer">
         <div class="section__content">
             <h2>References</h2>
             <p>
@@ -232,7 +230,7 @@ npm run build
                 </div>
             </p>
         </div>
-    </div>
+    </section>
 
 </div>
 
