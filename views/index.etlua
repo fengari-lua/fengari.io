@@ -30,8 +30,8 @@
                 <div class="snippets-row">
                     <div class="snippet">
                         <code class="snippet__code lua hljs">
-<pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
-window = js.global
+<pre><span class="hljs-keyword">local</span> js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
+<span class="hljs-keyword">local</span> window = js.global
 
 window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                         </code>
@@ -49,9 +49,9 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
 
                     <div class="snippet">
                         <code class="snippet__code lua hljs">
-<pre>js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
-window = js.global
-document = window.document
+<pre><span class="hljs-keyword">local</span> js = <span class="hljs-built_in">require</span> <span class="hljs-string">"js"</span>
+<span class="hljs-keyword">local</span> window = js.global
+<span class="hljs-keyword">local</span> document = window.document
 
 <span class="hljs-built_in">print</span>(<span class="hljs-string">"Document's title: "</span> .. document.title)</pre>
                         </code>
@@ -61,9 +61,8 @@ document = window.document
                             <div class="snippet__actions__action" data-action="run">
                                 ▶
                                 <div class="snippet__source" data-lang="lua">
-                                    window = js.global
-                                    document = window.document
-
+                                    local window = js.global
+                                    local document = window.document
                                     print("Document's title: " .. document.title)
                                 </div>
                             </div>
