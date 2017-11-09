@@ -14,7 +14,7 @@ body {
 
 pre, code, .quoted, #fengari-input, #fengari-prompt {
     font-family: 'profontwindowsregular';
-    font-size: 0.85rem;
+    font-size: 13px;
 }
 
 h1, h2, h3, h4 {
