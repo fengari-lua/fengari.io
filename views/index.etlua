@@ -13,7 +13,7 @@
 
     <section>
         <div class="section__content">
-            <h2>What is it ?</h2>
+            <h2>What is it?</h2>
 
             <p>
                 Fengari (<i>Moon</i> in greek) is the Lua VM written in JavaScript.
@@ -96,7 +96,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
 
     sleep(<span class="hljs-number">3</span>)
 
-    <span class="hljs-built_in">print</span> <span class="hljs-string">"Sleep well ?"</span>
+    <span class="hljs-built_in">print</span> <span class="hljs-string">"Sleep well?"</span>
 <span class="hljs-keyword">end</span>)()</pre>
                         </code>
                     <div class="snippet__output"></div>
@@ -125,7 +125,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
 
                                     sleep(3)
 
-                                    snippetPrint "Sleep well ?"
+                                    snippetPrint "Sleep well?"
                                 end)()
                             </div>
                         </div>
@@ -137,7 +137,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
 
     <section>
         <div class="section__content">
-            <h2>Test it out !</h2>
+            <h2>Test it out!</h2>
             <div class="repl">
                 <code id="fengari-console"></code>
                 <div class="fengari-input-container">
@@ -186,7 +186,7 @@ npm run build</pre>
                         <div class="snippet snippet--noaction">
                             <code class="snippet__code html hljs xml">
                                 <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span>&gt;</span><span class="javascript">
-    print(<span class="hljs-string">"hello world !"</span>)
+    print(<span class="hljs-string">"hello world!"</span>)
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/my-script.lua"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span> <span class="hljs-attr">async</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
