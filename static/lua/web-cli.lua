@@ -106,14 +106,29 @@ function input:onkeydown(e)
         doREPL()
         return false
     elseif key == "ArrowUp" then
-        historyIndex = historyIndex and historyIndex - 1 or #history
-        historyIndex = historyIndex > 0 and historyIndex or 1
+        if historyIndex then
+            if historyIndex > 1 then
+                historyIndex = historyIndex - 1
+            end
+        else -- start with more recent history item
+            local hist_len = #history
+            if hist_len > 0 then
+                historyIndex = hist_len
+            end
+        end
         input.value = history[historyIndex]
         return false
     elseif key == "ArrowDown" then
-        historyIndex = historyIndex and historyIndex + 1
-        historyIndex = historyIndex <= #history and historyIndex or #history
-        input.value = history[historyIndex]
+        local newvalue = ""
+        if historyIndex then
+            if historyIndex < #history then
+                historyIndex = historyIndex + 1
+                newvalue = history[historyIndex]
+            else -- no longer in history
+                historyIndex = nil
+            end
+        end
+        input.value = newvalue
         return false
     end
 end
