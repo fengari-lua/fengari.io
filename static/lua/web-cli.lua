@@ -102,6 +102,7 @@ function input:onkeydown(e)
 
     local key = e.key or e.which
     if key == "Enter" and not e.shiftKey then
+        historyIndex = nil
         doREPL()
         return false
     elseif key == "ArrowUp" then
