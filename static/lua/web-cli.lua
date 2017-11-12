@@ -65,9 +65,11 @@ local function doREPL()
     end
 
     local line = input.value
-    table.insert(history, line)
-    if #history > historyLimit then
-        table.remove(history, 1)
+    if history[#history] ~= line then
+        table.insert(history, line)
+        if #history > historyLimit then
+            table.remove(history, 1)
+        end
     end
 
     local fn, err = load("return " .. line, "stdin")
