@@ -8,4 +8,8 @@ app:get("/", function(self)
     return { render = "index" }
 end)
 
+app:get("/repl", function(self)
+    return { render = "repl" }
+end)
+
 return app

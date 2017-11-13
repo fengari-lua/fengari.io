@@ -1,0 +1,16 @@
+<section class="section--standalone">
+    <div class="repl">
+        <code id="fengari-console"></code>
+        <div class="fengari-input-container">
+            <label id="fengari-prompt" for="fengari-input">→ </label>
+            <textarea class="lua" id="fengari-input" rows="1" placeholder="Type some Lua here..."></textarea>
+        </div>
+    </div>
+</section>
+
+<script src="/static/js/fengari-web.js?v=1" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/lua.min.js"></script>
+
+<script src="/static/lua/web-cli.lua?v=1" type="application/lua" async></script>

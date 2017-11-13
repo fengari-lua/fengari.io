@@ -61,13 +61,21 @@ section.header, section.footer {
     color: #444 !important;
 }
 
-section:nth-child(2n) {
+section:nth-child(2n), section.section--standalone {
     background-color: #404ebc;
     background-image: linear-gradient(
       to bottom left,
       #4B4483, #4053BE 70%
     );
     color: white;
+}
+
+section.section--standalone {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 section:nth-child(2n-1) {
