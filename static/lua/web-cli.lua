@@ -130,6 +130,16 @@ function input:onkeydown(e)
         end
         input.value = newvalue
         return false
+    elseif key == "l"
+        and e.ctrlKey
+        and not e.shiftKey
+        and not e.altKey
+        and not e.metaKey
+        and not e.isComposing then
+        -- Ctrl+L clears screen like you would expect in a terminal
+        output.innerHTML = ""
+        _G.print(_G._COPYRIGHT)
+        return false
     end
 end
 
