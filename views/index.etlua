@@ -41,7 +41,10 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                             <div class="snippet__actions__action" data-action="run">
                                 ▶
                                 <div class="snippet__source" data-lang="lua">
-                                    js.global:alert("Hello from Fengari!")
+                                    local js = require "js"
+                                    local window = js.global
+
+                                    window:alert("Hello from Fengari!")
                                 </div>
                             </div>
                         </div>
@@ -61,8 +64,10 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                             <div class="snippet__actions__action" data-action="run">
                                 ▶
                                 <div class="snippet__source" data-lang="lua">
+                                    local js = require "js"
                                     local window = js.global
                                     local document = window.document
+
                                     print("Document's title: " .. document.title)
                                 </div>
                             </div>
@@ -118,14 +123,14 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                                     coroutine.yield(co)
                                 end
 
-                                local snippetPrint = _G.print
+                                local print = _G.print
 
                                 coroutine.wrap(function()
-                                    snippetPrint "Going to sleep now..."
+                                    print "Going to sleep now..."
 
                                     sleep(3)
 
-                                    snippetPrint "Sleep well?"
+                                    print "Sleep well?"
                                 end)()
                             </div>
                         </div>
