@@ -166,6 +166,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                         <div class="snippet snippet--noaction">
                             <code class="snippet__code bash hljs">
                                 <pre>git <span class="hljs-built_in">clone</span> https://github.com/fengari-lua/fengari-web.git
+cd fengari-web
 npm install
 npm run build</pre>
                             </code>
