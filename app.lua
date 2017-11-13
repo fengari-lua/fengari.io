@@ -5,10 +5,6 @@ app:enable("etlua")
 app.layout = require "views.layout"
 
 app:get("/", function(self)
-    local script = io.open("static/lua/web-cli.lua")
-    self.repl = script:read("*a")
-    script:close()
-
     return { render = "index" }
 end)
 
