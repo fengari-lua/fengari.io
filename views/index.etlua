@@ -93,7 +93,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
         <span class="hljs-built_in">assert</span>(<span class="hljs-built_in">coroutine</span>.resume(co))
     <span class="hljs-keyword">end</span>, delay*1000)
 
-    <span class="hljs-built_in">coroutine</span>.yield(co)
+    <span class="hljs-built_in">coroutine</span>.yield()
 <span class="hljs-keyword">end</span>
 
 <span class="hljs-built_in">coroutine</span>.wrap(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>
@@ -120,7 +120,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                                         assert(coroutine.resume(co))
                                     end, delay*1000)
 
-                                    coroutine.yield(co)
+                                    coroutine.yield()
                                 end
 
                                 local print = _G.print
