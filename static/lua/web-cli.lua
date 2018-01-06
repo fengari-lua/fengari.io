@@ -105,7 +105,7 @@ function input:onkeydown(e)
         historyIndex = nil
         doREPL()
         return false
-    elseif key == "ArrowUp" then
+    elseif key == "ArrowUp" or key == "Up" then
         if historyIndex then
             if historyIndex > 1 then
                 historyIndex = historyIndex - 1
@@ -118,7 +118,7 @@ function input:onkeydown(e)
         end
         input.value = history[historyIndex]
         return false
-    elseif key == "ArrowDown" then
+    elseif key == "ArrowDown" or key == "Down" then
         local newvalue = ""
         if historyIndex then
             if historyIndex < #history then
