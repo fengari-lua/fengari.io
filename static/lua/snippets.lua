@@ -17,34 +17,35 @@ local printToDOM = function(element, ...)
     end
 end
 
-document:querySelectorAll(".snippet__actions__action[data-action='run']")
-    :forEach(function (_, action)
-        action:addEventListener("click", function (_, event)
-            local target = event.currentTarget
-            local source = target:querySelector(".snippet__source")
-            local output = target:closest(".snippet"):querySelector(".snippet__output")
+-- IE/Edge<=16 doesn't support NodeList.forEach or NodeList[Symbol.iterator]
+local list = document:querySelectorAll(".snippet__actions__action[data-action='run']")
+for i=0, list.length-1 do
+    list[i]:addEventListener("click", function (_, event)
+        local target = event.currentTarget
+        local source = target:querySelector(".snippet__source")
+        local output = target:closest(".snippet"):querySelector(".snippet__output")
 
-            local oldPrint = _G.print
+        local oldPrint = _G.print
 
-            _G.print = function(...)
-                printToDOM(output, ...)
-                if (not output.classList:contains("snippet__output--visible")) then
-                    output.className = output.className .. " snippet__output--visible"
-                end
+        _G.print = function(...)
+            printToDOM(output, ...)
+            if (not output.classList:contains("snippet__output--visible")) then
+                output.className = output.className .. " snippet__output--visible"
             end
+        end
 
-            output.innerHTML = ""
+        output.innerHTML = ""
 
-            if source.dataset and source.dataset.lang == "lua" then
-                local success, msg = pcall(load(source.textContent))
+        if source.dataset and source.dataset.lang == "lua" then
+            local success, msg = pcall(load(source.textContent))
 
-                if not success then
-                    global.console:warn(msg or "An error occured while running snippet: \n" .. source.textContent)
-                end
-            else
-                global:eval(source.textContent)
+            if not success then
+                global.console:warn(msg or "An error occured while running snippet: \n" .. source.textContent)
             end
+        else
+            global:eval(source.textContent)
+        end
 
-            _G.print = oldPrint -- restore regular print
-        end)
+        _G.print = oldPrint -- restore regular print
     end)
+end
