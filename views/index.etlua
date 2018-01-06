@@ -158,86 +158,75 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
     <section>
         <div class="section__content">
             <h2>Getting started</h2>
-
             <p>
                 The easiest way to get started with Fengari in the browser is to use <a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>.
                 This module will watch the DOM for any <span class="quoted">&lt;script type=&quot;application/lua&quot; src=&quot;...&quot; async&gt;</span> and run them with Fengari.
             </p>
-
-            <p>
-                <ol>
-                    <li>
-                        <p>Build fengari-web:</p>
-                        <div class="snippet snippet--noaction">
-                            <code class="snippet__code bash hljs">
-                                <pre>$ git <span class="hljs-built_in">clone</span> https://github.com/fengari-lua/fengari-web.git
+            <ol>
+                <li>
+                    <p>Build fengari-web:</p>
+                    <div class="snippet snippet--noaction">
+                        <code class="snippet__code bash hljs">
+                            <pre>$ git <span class="hljs-built_in">clone</span> https://github.com/fengari-lua/fengari-web.git
 $ cd fengari-web
 $ npm install
 $ npm run build</pre>
-                            </code>
-                        </div>
-                    </li>
+                        </code>
+                    </div>
+                </li>
 
-                    <li>
-                        <p>Include it in your webpage:</p>
-                        <div class="snippet snippet--noaction">
-                            <code class="snippet__code html hljs xml">
-                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dist/fengari-web.js"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-                            </code>
-                        </div>
-                    </li>
+                <li>
+                    <p>Include it in your webpage:</p>
+                    <div class="snippet snippet--noaction">
+                        <code class="snippet__code html hljs xml">
+                            <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dist/fengari-web.js"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+                        </code>
+                    </div>
+                </li>
 
-                    <li>
-                        <p>Now any script of type <span class="quoted">application/lua</span> will be run by fengari:</p>
-                        <div class="snippet snippet--noaction">
-                            <code class="snippet__code html hljs xml">
-                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span>&gt;</span><span class="javascript">
-    print(<span class="hljs-string">"hello world!"</span>)
+                <li>
+                    <p>Now any script of type <span class="quoted">application/lua</span> will be run by fengari:</p>
+                    <div class="snippet snippet--noaction">
+                        <code class="snippet__code html hljs xml">
+                            <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span>&gt;</span><span class="javascript">
+print(<span class="hljs-string">"hello world!"</span>)
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/my-script.lua"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/lua"</span> <span class="hljs-attr">async</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-                            </code>
-                        </div>
-                    </li>
-                </ol>
-            </p>
+                        </code>
+                    </div>
+                </li>
+            </ol>
         </div>
     </section>
 
     <section>
         <div class="section__content">
             <h2>Structure</h2>
-
-            <p>
-                Fengari is spread across several repositories:
-                <ul>
-                    <li><a href="https://github.com/fengari-lua/fengari">fengari</a>: the core, largely a port of the PUC-Rio C implementation of Lua</li>
-                    <li><a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>: to use Fengari in the browser as easily as you might use JavaScript</li>
-                    <li><a href="https://github.com/fengari-lua/fengari-interop">fengari-interop</a>: a lua library that makes interoperating with JavaScript objects simple, it is already included in fengari-web</li>
-                    <li><a href="https://github.com/fengari-lua/fengari-node-cli">fengari-node-cli</a>: Lua CLI but running on top of Node.js</li>
-                </ul>
-            </p>
+            <p>Fengari is spread across several repositories:</p>
+            <ul>
+                <li><a href="https://github.com/fengari-lua/fengari">fengari</a>: the core, largely a port of the PUC-Rio C implementation of Lua</li>
+                <li><a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>: to use Fengari in the browser as easily as you might use JavaScript</li>
+                <li><a href="https://github.com/fengari-lua/fengari-interop">fengari-interop</a>: a lua library that makes interoperating with JavaScript objects simple, it is already included in fengari-web</li>
+                <li><a href="https://github.com/fengari-lua/fengari-node-cli">fengari-node-cli</a>: Lua CLI but running on top of Node.js</li>
+            </ul>
         </div>
     </section>
 
     <section class="footer">
         <div class="section__content">
             <h2>References</h2>
-            <p>
-                <ul>
-                    <li>Github: <a href="https://github.com/fengari-lua">fengari-lua</a></li>
-                    <li><a href="https://hackernoon.com/why-we-rewrote-lua-in-js-a66529a8278d">Why we rewrote Lua in JS</a></li>
-                    <li>Daurnimator's talk at Lua Workshop 2017: <a href="https://www.youtube.com/watch?v=xrLIgmd8xik">video</a>, <a href="https://www.lua.org/wshop17/fengari.html">slides</a></li>
-                </ul>
-            </p>
+            <ul>
+                <li>Github: <a href="https://github.com/fengari-lua">fengari-lua</a></li>
+                <li><a href="https://hackernoon.com/why-we-rewrote-lua-in-js-a66529a8278d">Why we rewrote Lua in JS</a></li>
+                <li>Daurnimator's talk at Lua Workshop 2017: <a href="https://www.youtube.com/watch?v=xrLIgmd8xik">video</a>, <a href="https://www.lua.org/wshop17/fengari.html">slides</a></li>
+            </ul>
 
             <h2>Contact/Help</h2>
-            <p>
-                <ul>
-                    <li>Mail: <a href="mailto:team@fengari.io">team@fengari.io</a></li>
-                    <li>Chat: <a href="ircs://chat.freenode.net:6697/fengari">#fengari on freenode</a> <a href="https://webchat.freenode.net/?channels=fengari">(Web Chat)</a> or <a href="https://matrix.to/#/#fengari:matrix.org">via Matrix</a></li>
-                </ul>
-            </p>
+            <ul>
+                <li>Mail: <a href="mailto:team@fengari.io">team@fengari.io</a></li>
+                <li>Chat: <a href="ircs://chat.freenode.net:6697/fengari">#fengari on freenode</a> <a href="https://webchat.freenode.net/?channels=fengari">(Web Chat)</a> or <a href="https://matrix.to/#/#fengari:matrix.org">via Matrix</a></li>
+            </ul>
         </div>
     </section>
 
