@@ -160,7 +160,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
             <h2>Getting started</h2>
             <p>
                 The easiest way to get started with Fengari in the browser is to use <a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>.
-                This module will watch the DOM for any <span class="quoted">&lt;script type=&quot;application/lua&quot; src=&quot;...&quot; async&gt;</span> and run them with Fengari.
+                This module will watch the DOM for any <span class="quoted">&lt;script type=&quot;application/lua&quot; src=&quot;...&quot;&gt;</span> and run them with Fengari.
             </p>
             <ol>
                 <li>
