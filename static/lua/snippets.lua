@@ -17,23 +17,26 @@ local printToDOM = function(element, ...)
     end
 end
 
--- Element.closest shim
--- https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
-local matches = global.Element.prototype.matches
-if not matches then
-    matches = global.Element.prototype.msMatchesSelector or global.Element.prototype.webkitMatchesSelector
-end
-local function closest(el, s)
-    if not document.documentElement:contains(el) then
-        return js.null
+local closest = global.Element.prototype.closest
+if not closest then
+    -- Element.closest shim
+    -- https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+    local matches = global.Element.prototype.matches
+    if not matches then
+        matches = global.Element.prototype.msMatchesSelector or global.Element.prototype.webkitMatchesSelector
     end
-    repeat
-        if matches(el, s) then
-            return el
+    closest = function(el, s)
+        if not document.documentElement:contains(el) then
+            return js.null
         end
-        el = el.parentElement or el.parentNode
-    until el == js.null
-    return js.null;
+        repeat
+            if matches(el, s) then
+                return el
+            end
+            el = el.parentElement or el.parentNode
+        until el == js.null
+        return js.null;
+    end
 end
 
 -- IE/Edge<=16 doesn't support NodeList.forEach or NodeList[Symbol.iterator]
