@@ -3,10 +3,7 @@ all: static/js/fengari-web.js
 serve: all
 	lapis server production
 
-fengari-web/dist/fengari-web.js: fengari-web/
-	(cd fengari-web && yarn install);
-
-static/js/fengari-web.js: fengari-web/dist/fengari-web.js
-	install -m 644 -D "$<" "$@"
+static/js/fengari-web.js:
+	curl -L https://github.com/fengari-lua/fengari-web/releases/download/v0.1.0/fengari-web.js -o $@
 
 .PHONY: all serve
