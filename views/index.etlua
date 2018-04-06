@@ -206,6 +206,7 @@ print(<span class="hljs-string">"hello world!"</span>)
                 <li><a href="https://github.com/fengari-lua/fengari-web">fengari-web</a>: to use Fengari in the browser as easily as you might use JavaScript</li>
                 <li><a href="https://github.com/fengari-lua/fengari-interop">fengari-interop</a>: a lua library that makes interoperating with JavaScript objects simple, it is already included in fengari-web</li>
                 <li><a href="https://github.com/fengari-lua/fengari-node-cli">fengari-node-cli</a>: Lua CLI but running on top of Node.js</li>
+                <li><a href="https://github.com/fengari-lua/fengari-loader">fengari-loader</a>: to bundle lua code as part of a [webpack](https://webpack.js.org/) build process</li>
             </ul>
         </div>
     </section>
