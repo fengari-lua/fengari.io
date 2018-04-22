@@ -3,7 +3,7 @@ local js = require "js"
 -- Save references to lua baselib functions used
 local _G = _G
 local load = load
-local pack, unpack = table.pack, table.unpack
+local pack, unpack, tinsert, tremove = table.pack, table.unpack, table.insert, table.remove
 local tostring = tostring
 local traceback = debug.traceback
 local xpcall = xpcall
@@ -66,9 +66,9 @@ local function doREPL()
 
     local line = input.value
     if history[#history] ~= line then
-        table.insert(history, line)
+        tinsert(history, line)
         if #history > historyLimit then
-            table.remove(history, 1)
+            tremove(history, 1)
         end
     end
 
