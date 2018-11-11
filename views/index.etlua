@@ -167,7 +167,7 @@ window:alert(<span class="hljs-string">"Hello from Fengari!"</span>)</pre>
                     <p>Download fengari-web:</p>
                     <div class="snippet snippet--noaction">
                         <code class="snippet__code bash hljs">
-                            <pre>$ curl -L -O https://github.com/fengari-lua/fengari-web/releases/download/v0.1.2/fengari-web.js</pre>
+                            <pre>$ curl -L -O https://github.com/fengari-lua/fengari-web/releases/download/v0.1.3/fengari-web.js</pre>
                         </code>
                     </div>
                 </li>
