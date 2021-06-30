@@ -223,7 +223,7 @@ print(<span class="hljs-string">"hello world!"</span>)
             <h2>Contact/Help</h2>
             <ul>
                 <li>Mail: <a href="mailto:team@fengari.io">team@fengari.io</a></li>
-                <li>Chat: <a href="ircs://irc.libera.chat:6697/fengari">#fengari on libera.chat</a> <a href="https://web.libera.chat/?channels=#fengari">(Web Chat)</a> or <a href="https://matrix.to/#/#fengari:matrix.org">via Matrix</a></li>
+                <li>Chat: <a href="ircs://irc.libera.chat:6697/fengari">#fengari on libera.chat</a> or <a href="https://web.libera.chat/?channels=#fengari">(Web Chat)</a></li>
             </ul>
         </div>
     </section>
